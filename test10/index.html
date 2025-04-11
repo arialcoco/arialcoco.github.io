@@ -626,8 +626,7 @@
                     from_name: nameInput.value,
                     reply_to: emailInput.value,
                     message: messageInput.value,
-                    to_email: '114566989@qq.com', // 确保目标邮箱正确
-                    subject: `来自您网站的留言：${nameInput.value}` // 添加主题使邮件更容易识别
+                    to_email: 'arialcoco@163.com' // 新的默认收件邮箱
                 };
                 
                 console.log('准备发送邮件:', templateParams);
@@ -636,7 +635,7 @@
                 emailjs.send('service_awmys0u', 'template_ab5tddc', templateParams)
                 .then(function(response) {
                     console.log('邮件发送成功 (EmailJS回应成功):', response);
-                    console.log('注意：请检查您的垃圾邮件文件夹，有时邮件会被误分类为垃圾邮件');
+                    console.log('邮件已发送到: arialcoco@163.com');
                     
                     // 记录最后提交时间
                     lastSubmitTime = new Date().getTime();
