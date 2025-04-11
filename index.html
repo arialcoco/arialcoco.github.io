@@ -1,0 +1,521 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陈丹 - AI产品专家</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#111827',
+                        secondary: '#4b5563',
+                        accent: '#3b82f6',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-balance {
+                text-wrap: balance;
+            }
+            .section-padding {
+                @apply py-20 md:py-28;
+            }
+            .container-custom {
+                @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+            }
+            .heading-xl {
+                @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight;
+            }
+            .heading-lg {
+                @apply text-3xl md:text-4xl font-bold;
+            }
+            .heading-md {
+                @apply text-2xl font-bold mb-4;
+            }
+            .btn-primary {
+                @apply px-6 py-3 bg-accent text-white font-medium rounded-md hover:bg-blue-700 transition-colors;
+            }
+        }
+    </style>
+</head>
+<body class="bg-white text-primary antialiased">
+    <!-- 导航栏 -->
+    <header class="fixed w-full bg-white/90 backdrop-blur-sm z-50 shadow-sm">
+        <div class="container-custom flex justify-between items-center py-4">
+            <a href="#" class="text-2xl font-bold">陈丹</a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#about" class="font-medium hover:text-accent transition-colors">关于我</a>
+                <a href="#experience" class="font-medium hover:text-accent transition-colors">专业经验</a>
+                <a href="#projects" class="font-medium hover:text-accent transition-colors">项目经验</a>
+                <a href="#contact" class="font-medium hover:text-accent transition-colors">联系方式</a>
+            </nav>
+            <button class="md:hidden" id="mobile-menu-btn">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+        <div class="mobile-menu hidden md:hidden w-full bg-white" id="mobile-menu">
+            <div class="container-custom py-4 flex flex-col space-y-4">
+                <a href="#about" class="font-medium">关于我</a>
+                <a href="#experience" class="font-medium">专业经验</a>
+                <a href="#projects" class="font-medium">项目经验</a>
+                <a href="#contact" class="font-medium">联系方式</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主内容区 -->
+    <main>
+        <!-- 英雄部分 -->
+        <section class="pt-32 pb-20 md:pt-40 md:pb-28">
+            <div class="container-custom">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-10 md:mb-0">
+                        <h1 class="heading-xl mb-6">
+                            <span class="block">陈丹</span>
+                            <span class="block text-accent">To B AI产品专家</span>
+                        </h1>
+                        <p class="text-xl text-secondary mb-8 max-w-2xl">
+                            11年全链路产品经验 | 交通大学硕士 | AIGC企业级应用 | SaaS产品规划专家
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#contact" class="btn-primary">联系我</a>
+                            <a href="#projects" class="px-6 py-3 border border-gray-300 rounded-md hover:border-accent hover:text-accent transition-colors">查看项目</a>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <img src="https://picsum.photos/600/600?random=1" alt="陈丹照片" class="rounded-xl shadow-lg w-full max-w-md mx-auto">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 关于我 -->
+        <section id="about" class="section-padding bg-gray-50">
+            <div class="container-custom">
+                <div class="flex flex-col md:flex-row items-start gap-12">
+                    <div class="md:w-2/5">
+                        <h2 class="heading-lg mb-6">关于我</h2>
+                        <p class="text-secondary mb-4 text-lg">
+                            作为拥有11年全链路产品经验的AI产品专家，我主导过6+行业（汽车/保险/银行/酒店/电商等）用户体验、社媒营销、SCRM、BI SaaS产品0-1架构设计，构建标准化解决方案。
+                        </p>
+                        <p class="text-secondary mb-4 text-lg">
+                            我精通LLM应用（ChatGLM3/Baichuan2）、NLP工程化、RPA+AI自动化，完成7个AI工程化项目落地，NLP模型准确率突破95%（行业平均80%）。
+                        </p>
+                        <p class="text-secondary mb-6 text-lg">
+                            我已为华为、保时捷、上汽、通用、美孚、极星、汇丰等20+世界500强企业提供专业的产品解决方案。
+                        </p>
+                    </div>
+                    <div class="md:w-3/5">
+                        <h3 class="heading-md">专业技能</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="bg-white p-6 rounded-lg shadow-sm">
+                                <div class="flex items-center mb-4">
+                                    <i class="fas fa-robot text-accent text-xl mr-3"></i>
+                                    <h4 class="font-bold text-xl">AI企业级应用</h4>
+                                </div>
+                                <p class="text-secondary">
+                                    设计和实施企业级AI解决方案，完成7个AI工程化项目落地，NLP模型准确率达95%，远超行业80%平均水平。
+                                </p>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-sm">
+                                <div class="flex items-center mb-4">
+                                    <i class="fas fa-cloud text-accent text-xl mr-3"></i>
+                                    <h4 class="font-bold text-xl">SaaS产品规划</h4>
+                                </div>
+                                <p class="text-secondary">
+                                    主导6+行业SaaS产品0-1架构设计，涵盖用户体验、社媒营销、SCRM、BI等领域的标准化解决方案构建。
+                                </p>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-sm">
+                                <div class="flex items-center mb-4">
+                                    <i class="fas fa-brain text-accent text-xl mr-3"></i>
+                                    <h4 class="font-bold text-xl">大模型与知识库</h4>
+                                </div>
+                                <p class="text-secondary">
+                                    完成5个行业知识库构建，通过RAG+微调实现意图识别准确率92%，精通ChatGLM3和Baichuan2等大模型应用。
+                                </p>
+                            </div>
+                            <div class="bg-white p-6 rounded-lg shadow-sm">
+                                <div class="flex items-center mb-4">
+                                    <i class="fas fa-tasks text-accent text-xl mr-3"></i>
+                                    <h4 class="font-bold text-xl">项目管理与咨询</h4>
+                                </div>
+                                <p class="text-secondary">
+                                    主导40+客户售前方案设计，实现32%转化率，带领10+团队完成20+全链路交付项目，服务40+行业头部企业。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 专业经验 -->
+        <section id="experience" class="section-padding">
+            <div class="container-custom">
+                <div class="text-center mb-16">
+                    <h2 class="heading-lg mb-4">专业经验</h2>
+                    <p class="text-secondary text-lg max-w-3xl mx-auto">
+                        11年全链路产品经验，服务20+世界500强企业，打造先进的AI解决方案
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-building text-accent text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold">企业AI解决方案</h3>
+                                <p class="text-secondary">服务40+行业头部企业</p>
+                            </div>
+                        </div>
+                        <ul class="space-y-3 text-secondary">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                <span>主导40+客户售前方案设计，32%项目转化率</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                <span>服务华为、保时捷、上汽、通用、美孚、极星、汇丰等头部企业</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                <span>全周期项目管理：需求调研→投标方案→产品迭代→交付验收</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-cog text-accent text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold">AI技术实施与优化</h3>
+                                <p class="text-secondary">行业领先AI工程化能力</p>
+                            </div>
+                        </div>
+                        <ul class="space-y-3 text-secondary">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                <span>完成5个行业知识库构建，RAG+微调实现意图识别准确率92%</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                <span>完成7个AI工程化项目落地，NLP模型准确率突破95%</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                <span>客服辅助、内容生成、对话质检、文本分析等应用场景</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-users text-accent text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold">SaaS产品规划与设计</h3>
+                                <p class="text-secondary">6+行业产品0-1架构经验</p>
+                            </div>
+                        </div>
+                        <ul class="space-y-3 text-secondary">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                <span>主导汽车/保险/银行/酒店/电商等行业SaaS产品0-1设计</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                <span>用户体验、社媒营销、SCRM、BI产品标准化解决方案构建</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                <span>担任产品经理、项目经理、售前顾问、需求分析、UI设计师</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-chart-line text-accent text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold">战略分析与团队管理</h3>
+                                <p class="text-secondary">全链路项目交付能力</p>
+                            </div>
+                        </div>
+                        <ul class="space-y-3 text-secondary">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                <span>市场分析、战略分析、竞品调研经验丰富</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                <span>带领10+团队，协调研发、销售、运营，完成20+全链路交付</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-accent mt-1 mr-2"></i>
+                                <span>分析CEM市场环境，调研CEM、SCRM、社媒营销竞争环境</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 项目经验 -->
+        <section id="projects" class="section-padding bg-gray-50">
+            <div class="container-custom">
+                <div class="text-center mb-16">
+                    <h2 class="heading-lg mb-4">项目经验</h2>
+                    <p class="text-secondary text-lg max-w-3xl mx-auto">
+                        探索我近期完成的精选项目案例，展示我在AI产品开发与实施方面的能力
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 gap-8">
+                    <!-- 项目卡片1 -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-sm">
+                        <div class="p-8">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                                <h3 class="text-2xl font-bold mb-2 md:mb-0">猫箱作品分析</h3>
+                                <div class="flex space-x-2">
+                                    <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">AIGC</span>
+                                    <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">NLP</span>
+                                </div>
+                            </div>
+                            <p class="text-secondary mb-4">
+                                基于大模型的内容分析工具，为创作者提供作品反馈与改进建议。
+                            </p>
+                            <div class="mt-4 text-right">
+                                <a href="https://ncnz8alujwvn.feishu.cn/wiki/NdHswbuBFidJfikUvBoc9b7lnZf?from=from_copylink" target="_blank" class="text-accent hover:text-blue-700 transition-colors inline-flex items-center">
+                                    <span class="mr-1">查看详情</span> <i class="fas fa-external-link-alt text-sm"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 项目卡片2 -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-sm">
+                        <div class="p-8">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                                <h3 class="text-2xl font-bold mb-2 md:mb-0">AIGC游戏生图项目</h3>
+                                <div class="flex space-x-2">
+                                    <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">AI生成</span>
+                                    <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">游戏</span>
+                                </div>
+                            </div>
+                            <p class="text-secondary mb-4">
+                                针对某千万流水的IP游戏公司设计生产力工具，主要解决项目迭代时原画设计、市场推广的效率瓶颈，成为设计师灵感来源，解决高频但缺资源的推广场景以及IP设计一致性的问题。
+                            </p>
+                            <div class="mt-6 space-y-3">
+                                <div class="flex items-start">
+                                    <span class="font-semibold text-primary min-w-[60px] mr-2">职责：</span>
+                                    <span class="text-secondary">产品负责人，调研市场部和设计部痛点，与团队完成0-1设计生图工具链（文生图/图生图/LORA训练）并上线。</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="font-semibold text-primary min-w-[60px] mr-2">业绩：</span>
+                                    <span class="text-secondary">实现每日上千张图片生成量，推动市场部、设计部的产出效率提升20%。</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 项目卡片3 -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-sm">
+                        <div class="p-8">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                                <h3 class="text-2xl font-bold mb-2 md:mb-0">上汽社媒营销项目</h3>
+                                <div class="flex space-x-2">
+                                    <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">AI+RPA</span>
+                                    <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm">社媒营销</span>
+                                </div>
+                            </div>
+                            <p class="text-secondary mb-4">
+                                面向上汽的品牌部门对外的社交媒体营销系统。通过AI视频、内容生成提升营销内容制作效率，RPA技术解决社交媒体账号运营的成本，实现高效的内容传播与品牌推广。
+                            </p>
+                            <div class="mt-6 space-y-3">
+                                <div class="flex items-start">
+                                    <span class="font-semibold text-primary min-w-[60px] mr-2">职责：</span>
+                                    <span class="text-secondary">作为本次项目的负责人，完成0-1的设计，搭建AI+RPA的养号-内容生成-发布-数据分析闭环。</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="font-semibold text-primary min-w-[60px] mr-2">业绩：</span>
+                                    <span class="text-secondary">集成百炼大模型+视频编辑器，实现日生成短视频1000+条。人效比从1:8提升至1:20，内容传播量提升10倍。</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 项目卡片4 -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow-sm">
+                        <div class="p-8">
+                            <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                                <h3 class="text-2xl font-bold mb-2 md:mb-0">上汽KOE全员营销项目</h3>
+                                <div class="flex space-x-2">
+                                    <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">营销系统</span>
+                                    <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">任务管理</span>
+                                </div>
+                            </div>
+                            <p class="text-secondary mb-4">
+                                面向上汽的品牌、公关部门的KOE全员营销系统。主要解决营销任务管理难题，实现任务和激励线上化，任务审核自动化，让员工自发成为品牌的推荐官，提升品牌影响力和市场覆盖范围。
+                            </p>
+                            <div class="mt-6 space-y-3">
+                                <div class="flex items-start">
+                                    <span class="font-semibold text-primary min-w-[60px] mr-2">职责：</span>
+                                    <span class="text-secondary">全面统筹项目推进，与营销部门沟通痛点，完成PC和移动端0-1的设计。</span>
+                                </div>
+                                <div class="flex items-start">
+                                    <span class="font-semibold text-primary min-w-[60px] mr-2">业绩：</span>
+                                    <span class="text-secondary">每月分发1000+条营销任务，每月处理20W+工单，覆盖3W+员工、1W+经销商和车主，品牌和公关平均降低3个人力。</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <a href="#contact" class="btn-primary inline-block">探索更多合作机会</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 联系方式 -->
+        <section id="contact" class="section-padding">
+            <div class="container-custom">
+                <div class="flex flex-col lg:flex-row gap-16">
+                    <div class="lg:w-1/2">
+                        <h2 class="heading-lg mb-6">联系我</h2>
+                        <p class="text-lg text-secondary mb-8">
+                            如果您正在寻找经验丰富的AI产品专家，欢迎联系我讨论您的项目需求。无论是需要咨询、合作还是其他机会，我都很乐意与您交流。
+                        </p>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 rounded-full p-3 mr-4">
+                                    <i class="fas fa-envelope text-accent"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg mb-1">邮箱</h3>
+                                    <p class="text-secondary">114566989@qq.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 rounded-full p-3 mr-4">
+                                    <i class="fab fa-weixin text-accent"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-lg mb-1">微信</h3>
+                                    <p class="text-secondary">arialcoco</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex space-x-4 mt-8">
+                            <a href="#" class="bg-blue-100 hover:bg-blue-200 transition-colors rounded-full p-3">
+                                <i class="fab fa-weixin text-accent text-xl"></i>
+                            </a>
+                            <a href="mailto:114566989@qq.com" class="bg-blue-100 hover:bg-blue-200 transition-colors rounded-full p-3">
+                                <i class="fas fa-envelope text-accent text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="lg:w-1/2">
+                        <form class="bg-white p-8 rounded-xl shadow-sm">
+                            <h3 class="heading-md">发送消息</h3>
+                            <div class="space-y-6">
+                                <div>
+                                    <label for="name" class="block text-sm font-medium text-gray-700 mb-1">姓名</label>
+                                    <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent">
+                                </div>
+                                
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">邮箱</label>
+                                    <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent">
+                                </div>
+                                
+                                <div>
+                                    <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">主题</label>
+                                    <input type="text" id="subject" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent">
+                                </div>
+                                
+                                <div>
+                                    <label for="message" class="block text-sm font-medium text-gray-700 mb-1">消息</label>
+                                    <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"></textarea>
+                                </div>
+                                
+                                <button type="submit" class="btn-primary w-full">发送消息</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-100 py-12">
+        <div class="container-custom">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <p class="text-xl font-bold">陈丹</p>
+                    <p class="text-gray-600 mt-2">© 2023 版权所有</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="mailto:114566989@qq.com" class="text-gray-600 hover:text-accent transition-colors">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-accent transition-colors">
+                        <i class="fab fa-weixin text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 移动端菜单切换
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // 关闭移动端菜单
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html> 
