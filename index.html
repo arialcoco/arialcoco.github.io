@@ -1,13 +1,21 @@
-
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>陈丹 - AI产品专家</title>
+    <title>陈丹 - To B产品专家&售前顾问</title>
+    <link rel="icon" href="bitbug_favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="bitbug_favicon.ico" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
+        // 初始化EmailJS
+        (function() {
+            // 正确设置公共密钥
+            emailjs.init("vb0ly_yghecPHYoi3");
+        })();
+        
         tailwind.config = {
             theme: {
                 extend: {
@@ -80,21 +88,25 @@
         <section class="pt-32 pb-20 md:pt-40 md:pb-28">
             <div class="container-custom">
                 <div class="flex flex-col md:flex-row items-center">
-                    <div class="md:w-1/2 mb-10 md:mb-0">
-                        <h1 class="heading-xl mb-6">
-                            <span class="block">陈丹</span>
-                            <span class="block text-accent">To B AI产品专家</span>
-                        </h1>
-                        <p class="text-xl text-secondary mb-8 max-w-2xl">
-                            11年全链路产品经验 | 交通大学硕士 | AIGC企业级应用 | SaaS产品规划专家
-                        </p>
-                        <div class="flex flex-wrap gap-4">
+                    <div class="md:w-1/2 mb-10 md:mb-0 flex flex-col h-full justify-between">
+                        <div>
+                            <h1 class="heading-xl mb-6">
+                                <span class="block mb-4">陈丹</span>
+                                <span class="block text-accent text-3xl md:text-4xl">To B产品专家&售前顾问</span>
+                            </h1>
+                            <p class="text-xl text-secondary mb-8 max-w-2xl">
+                                11年全链路产品经验 | 上海 | 交通大学MBA硕士
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap gap-4 mt-auto">
                             <a href="#contact" class="btn-primary">联系我</a>
                             <a href="#projects" class="px-6 py-3 border border-gray-300 rounded-md hover:border-accent hover:text-accent transition-colors">查看项目</a>
                         </div>
                     </div>
-                    <div class="md:w-1/2">
-                        <img src="https://picsum.photos/600/600?random=1" alt="陈丹照片" class="rounded-xl shadow-lg w-full max-w-md mx-auto">
+                    <div class="md:w-1/2 flex justify-center items-center">
+                        <div class="w-full max-w-[300px]">
+                            <img src="头像.jpg" alt="陈丹照片" class="rounded-xl shadow-lg w-full object-contain h-auto">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -107,7 +119,7 @@
                     <div class="md:w-2/5">
                         <h2 class="heading-lg mb-6">关于我</h2>
                         <p class="text-secondary mb-4 text-lg">
-                            作为拥有11年全链路产品经验的AI产品专家，我主导过6+行业（汽车/保险/银行/酒店/电商等）用户体验、社媒营销、SCRM、BI SaaS产品0-1架构设计，构建标准化解决方案。
+                            作为拥有11年全链路产品经验的To B产品专家和售前顾问，我主导过6+行业（汽车/保险/银行/酒店/电商等）用户体验、社媒营销、SCRM、BI SaaS产品0-1架构设计，构建标准化解决方案。
                         </p>
                         <p class="text-secondary mb-4 text-lg">
                             我精通LLM应用（ChatGLM3/Baichuan2）、NLP工程化、RPA+AI自动化，完成7个AI工程化项目落地，NLP模型准确率突破95%（行业平均80%）。
@@ -296,12 +308,13 @@
                             <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
                                 <h3 class="text-2xl font-bold mb-2 md:mb-0">猫箱作品分析</h3>
                                 <div class="flex space-x-2">
-                                    <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">AIGC</span>
-                                    <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">NLP</span>
+                                    <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">宏观分析</span>
+                                    <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">商业模式分析</span>
+                                    <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">产品拆解</span>
                                 </div>
                             </div>
                             <p class="text-secondary mb-4">
-                                基于大模型的内容分析工具，为创作者提供作品反馈与改进建议。
+                                猫箱APP是字节跳动旗下推出的一款AI角色情感扮演社交应用，由北京春田知韵科技有限公司开发，基于云雀大模型技术构建。文中从环境分析、公司分析、产品分析的角度，层层拆解猫箱APP。
                             </p>
                             <div class="mt-4 text-right">
                                 <a href="https://ncnz8alujwvn.feishu.cn/wiki/NdHswbuBFidJfikUvBoc9b7lnZf?from=from_copylink" target="_blank" class="text-accent hover:text-blue-700 transition-colors inline-flex items-center">
@@ -403,7 +416,7 @@
                     <div class="lg:w-1/2">
                         <h2 class="heading-lg mb-6">联系我</h2>
                         <p class="text-lg text-secondary mb-8">
-                            如果您正在寻找经验丰富的AI产品专家，欢迎联系我讨论您的项目需求。无论是需要咨询、合作还是其他机会，我都很乐意与您交流。
+                            如果您正在寻找经验丰富的To B产品专家和售前顾问，欢迎联系我讨论您的项目需求。无论是需要SaaS产品规划、AIGC企业级应用还是客户体验数字化服务，我都很乐意与您交流。
                         </p>
                         
                         <div class="space-y-6">
@@ -439,30 +452,32 @@
                     </div>
                     
                     <div class="lg:w-1/2">
-                        <form class="bg-white p-8 rounded-xl shadow-sm">
+                        <form id="contactForm" class="bg-white p-8 rounded-xl shadow-sm">
                             <h3 class="heading-md">发送消息</h3>
                             <div class="space-y-6">
                                 <div>
                                     <label for="name" class="block text-sm font-medium text-gray-700 mb-1">姓名</label>
-                                    <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent">
+                                    <input type="text" id="name" required class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent">
+                                    <p id="nameError" class="text-red-500 text-sm mt-1 hidden">请输入您的姓名</p>
                                 </div>
                                 
                                 <div>
                                     <label for="email" class="block text-sm font-medium text-gray-700 mb-1">邮箱</label>
-                                    <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent">
+                                    <input type="email" id="email" required class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent">
+                                    <p id="emailError" class="text-red-500 text-sm mt-1 hidden">请输入有效的邮箱地址</p>
                                 </div>
                                 
                                 <div>
-                                    <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">主题</label>
-                                    <input type="text" id="subject" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent">
+                                    <label for="message" class="block text-sm font-medium text-gray-700 mb-1">内容</label>
+                                    <textarea id="message" rows="5" required maxlength="500" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"></textarea>
+                                    <div class="flex justify-between mt-1">
+                                        <p id="messageError" class="text-red-500 text-sm hidden">请输入内容（最多500字）</p>
+                                        <p id="charCount" class="text-gray-500 text-sm">0/500</p>
+                                    </div>
                                 </div>
                                 
-                                <div>
-                                    <label for="message" class="block text-sm font-medium text-gray-700 mb-1">消息</label>
-                                    <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent"></textarea>
-                                </div>
-                                
-                                <button type="submit" class="btn-primary w-full">发送消息</button>
+                                <button type="submit" id="submitBtn" class="btn-primary w-full">发送消息</button>
+                                <p id="formStatus" class="text-center mt-2 hidden"></p>
                             </div>
                         </form>
                     </div>
@@ -478,6 +493,9 @@
                 <div class="mb-6 md:mb-0">
                     <p class="text-xl font-bold">陈丹</p>
                     <p class="text-gray-600 mt-2">© 2023 版权所有</p>
+                    <div class="mt-3">
+                        <a href="https://hits.sh/arialcoco.github.io/"><img alt="Hits" src="https://hits.sh/arialcoco.github.io.svg?color=289df0"/></a>
+                    </div>
                 </div>
                 <div class="flex space-x-6">
                     <a href="mailto:114566989@qq.com" class="text-gray-600 hover:text-accent transition-colors">
@@ -514,6 +532,152 @@
                     // 关闭移动端菜单
                     document.getElementById('mobile-menu').classList.add('hidden');
                 }
+            });
+        });
+
+        // 联系表单功能
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const messageInput = document.getElementById('message');
+            const submitBtn = document.getElementById('submitBtn');
+            const formStatus = document.getElementById('formStatus');
+            const charCount = document.getElementById('charCount');
+            
+            // 字数统计
+            messageInput.addEventListener('input', function() {
+                const length = this.value.length;
+                charCount.textContent = `${length}/500`;
+                
+                if (length > 500) {
+                    this.value = this.value.substring(0, 500);
+                    charCount.textContent = '500/500';
+                }
+            });
+            
+            // 检查敏感词
+            function containsSensitiveWords(text) {
+                const sensitiveWords = ['黄', '赌', '毒'];
+                return sensitiveWords.some(word => text.includes(word));
+            }
+            
+            // 验证邮箱格式
+            function isValidEmail(email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+            
+            // 防止频繁提交
+            let lastSubmitTime = 0;
+            const SUBMIT_INTERVAL = 60000; // 1分钟内只能提交一次
+            
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // 重置错误提示
+                document.getElementById('nameError').classList.add('hidden');
+                document.getElementById('emailError').classList.add('hidden');
+                document.getElementById('messageError').classList.add('hidden');
+                
+                // 表单验证
+                let isValid = true;
+                
+                if (!nameInput.value.trim()) {
+                    document.getElementById('nameError').classList.remove('hidden');
+                    isValid = false;
+                }
+                
+                if (!emailInput.value.trim() || !isValidEmail(emailInput.value)) {
+                    document.getElementById('emailError').classList.remove('hidden');
+                    isValid = false;
+                }
+                
+                if (!messageInput.value.trim()) {
+                    document.getElementById('messageError').classList.remove('hidden');
+                    document.getElementById('messageError').textContent = '请输入内容（最多500字）';
+                    isValid = false;
+                } else if (containsSensitiveWords(messageInput.value)) {
+                    document.getElementById('messageError').classList.remove('hidden');
+                    document.getElementById('messageError').textContent = '内容包含不适当词汇，请修改';
+                    isValid = false;
+                }
+                
+                // 检查提交频率
+                const now = new Date().getTime();
+                if (now - lastSubmitTime < SUBMIT_INTERVAL) {
+                    formStatus.textContent = `请稍后再试，每分钟只能提交一次`;
+                    formStatus.classList.remove('hidden', 'text-green-500');
+                    formStatus.classList.add('text-red-500');
+                    return;
+                }
+                
+                if (!isValid) return;
+                
+                // 禁用提交按钮，防止重复提交
+                submitBtn.disabled = true;
+                submitBtn.textContent = '发送中...';
+                
+                // 使用Email.js发送邮件 (需要先引入Email.js库)
+                // 由于这是静态网站，使用Email.js可以在不需要后端服务的情况下发送邮件
+                
+                // 准备模板参数
+                const templateParams = {
+                    from_name: nameInput.value,
+                    reply_to: emailInput.value,
+                    message: messageInput.value,
+                    to_email: 'arialcoco@163.com' // 新的默认收件邮箱
+                };
+                
+                console.log('准备发送邮件:', templateParams);
+                
+                // 恢复EmailJS发送功能，使用新的服务ID
+                emailjs.send('service_awmys0u', 'template_ab5tddc', templateParams)
+                .then(function(response) {
+                    console.log('邮件发送成功 (EmailJS回应成功):', response);
+                    console.log('邮件已发送到: arialcoco@163.com');
+                    
+                    // 记录最后提交时间
+                    lastSubmitTime = new Date().getTime();
+                    
+                    // 显示成功消息
+                    formStatus.textContent = '消息已发送，感谢您的留言！(注意：请检查垃圾邮件文件夹)';
+                    formStatus.classList.remove('hidden', 'text-red-500');
+                    formStatus.classList.add('text-green-500');
+                    
+                    // 重置表单
+                    contactForm.reset();
+                    charCount.textContent = '0/500';
+                    
+                    // 恢复提交按钮
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = '发送消息';
+                    
+                    // 5秒后隐藏状态消息
+                    setTimeout(() => {
+                        formStatus.classList.add('hidden');
+                    }, 5000);
+                })
+                .catch(function(error) {
+                    // 错误处理代码
+                    console.error('发送失败：', error);
+                    formStatus.textContent = '发送失败，请稍后再试';
+                    formStatus.classList.remove('hidden', 'text-green-500');
+                    formStatus.classList.add('text-red-500');
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = '发送消息';
+                    
+                    // 如果发送失败，保存到本地存储
+                    const savedMessages = JSON.parse(localStorage.getItem('contactMessages') || '[]');
+                    savedMessages.push({
+                        name: nameInput.value,
+                        email: emailInput.value,
+                        message: messageInput.value,
+                        date: new Date().toISOString()
+                    });
+                    localStorage.setItem('contactMessages', JSON.stringify(savedMessages));
+                    console.log('消息已保存到本地存储');
+                });
             });
         });
     </script>
